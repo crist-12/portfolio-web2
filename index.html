@@ -8,7 +8,14 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <link rel="stylesheet" type="text/css" href="css/skins/color-1.css"/>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style-switcher.css"/>
 
+    <link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-1.css" title="color-1">
+    <link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-2.css" title="color-2" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-3.css" title="color-3" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-4.css" title="color-4" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-5.css" title="color-5" disabled>
+    
 </head>
 <body>
     <header>
@@ -28,17 +35,16 @@
         <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
         <div class="nav-menu-inner">
             <ul>
-                <li><a href="#" class="inner-shadow active">Home</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">About</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">Servicios</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">Portafolio</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">Contáctame</a></li>
+                <li><a href="#home" class="link-item inner-shadow active">Home</a></li>
+                <li><a href="#about" class="link-item outer-shadow hover-in-shadow">About</a></li>
+                <li><a href="#services" class="link-item outer-shadow hover-in-shadow">Servicios</a></li>
+                <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">Portafolio</a></li>
             </ul>
         </div>
         <p class="copyright-text">&copy; 2021 Christopher Ortiz</p>
     </nav>
-
-    <section class="home-section section">
+    <div class="fade-out-effect"></div>
+    <section class="home-section section active" id="home">
 
         <div class="effect-wrap">
             <div class="effect effect-1">
@@ -66,7 +72,7 @@
                     <p>Hello</p>
                     <h2>I'm Christopher</h2>
                     <h1>Web Designer & Developer</h1>
-                    <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+                    <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
                 </div>
                 <div class="home-img">
                     <div class="img-box">
@@ -78,7 +84,7 @@
         </div>
     </section>
 
-    <section class="about-section section">
+    <section class="about-section section" id="about">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -101,7 +107,7 @@
                 <div class="about-info">
                     <p><span>Hi! I'm Christopher Ortiz and I'm a Web and Mobile Developer.</span> Proident sit do tempor sit. Eu enim occaecat incididunt et ex reprehenderit do ea anim nostrud ipsum tempor ea. Do sint in fugiat mollit enim ullamco anim proident cillum.</p>
                     <p>Quis duis cillum qui culpa tempor Lorem consequat cupidatat. Lorem aliquip eiusmod reprehenderit reprehenderit. Lorem fugiat dolor reprehenderit dolor dolor nostrud in in do ipsum pariatur.Duis excepteur dolore commodo fugiat deserunt ipsum magna aliqua veniam exercitation voluptate cupidatat cillum est. Amet velit ad consectetur do. Dolor nostrud aliqua nulla consequat nulla adipisicing eu. Velit est esse aliqua duis quis dolore duis qui quis qui elit. Cupidatat deserunt cillum eu ut elit Lorem ea et veniam. Ad in enim nulla sint eu voluptate irure do labore. Qui esse est id irure occaecat amet magna.</p>
-                    <a href="#" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
+                    <a href="#" class="link-item btn-1 outer-shadow hover-in-shadow">Download CV</a>
                     <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire me!</a>
                 </div>
             </div>
@@ -211,7 +217,7 @@
         </div>
     </section>
 
-    <section class="service-section section">
+    <section class="service-section section" id="services">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -254,7 +260,7 @@
         </div>
     </section>
 
-    <section class="portfolio-section section">
+    <section class="portfolio-section section" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -570,7 +576,27 @@
         </div>
     </div>
 
+    <div class="style-switcher outer-shadow">
+        <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+            <i class="fas fa-cog fa-spin">
+            </i>
+        </div>
+        <div class="day-night s-icon outer-shadow hover-in-shadow">
+            <i class="fas"></i>
+        </div>
+        <h4>Tema</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+            
+        </div>
+    </div>
+
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/style-switcher.js"></script>
 </body>
 </html>
 
