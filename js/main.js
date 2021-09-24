@@ -172,13 +172,12 @@ function bodyScrollingToggle(){
 
 
 (()=>{
-    const sections = document.querySelectorAll(".section");
-    console.log("hola");
+     const sections = document.querySelectorAll(".section");
     sections.forEach((section)=>{
         if(!section.classList.contains("active")){
             section.classList.add("hide");
         }
-    })
+    }) 
 
     const hamburgerBtn = document.querySelector(".hamburger-btn"),
     navMenu = document.querySelector(".nav-menu"),
@@ -189,7 +188,6 @@ function bodyScrollingToggle(){
 
     function showNavMenu(){
         navMenu.classList.toggle("open");
-        bodyScrollingToggle();
     }
 
     function hideNavMenu(){
@@ -238,3 +236,10 @@ function bodyScrollingToggle(){
     })
 
 })();
+
+window.addEventListener("load", ()=>{
+    document.querySelector(".preloader").classList.add("fade-out");
+    setTimeout(()=>{
+        document.querySelector(".preloader").style.display="none";
+    }, 600)
+})
